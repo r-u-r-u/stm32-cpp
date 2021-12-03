@@ -15,12 +15,7 @@
   *
   ******************************************************************************
   */
-#include "main.h"
-#include "adc.h"
-#include "i2c.h"
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
+ #include"my_mouse.hpp"
 void SystemClock_Config(void) __attribute__((weak));
 /**
   * @brief  The application entry point.
@@ -45,8 +40,8 @@ int main(void)
   while (1)
   {
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
-    HAL_Delay(500);
+    HAL_Delay(100);
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
-    HAL_Delay(500);
+    HAL_Delay(100);
   }
 }
