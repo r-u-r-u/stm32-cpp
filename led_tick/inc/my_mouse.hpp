@@ -10,6 +10,8 @@
 #include"map.hpp"
 #include"pose.hpp"
 
+void SystemClock_Config(void) __attribute__((weak));
+
 namespace mouse{
 
 class my_mouse{
